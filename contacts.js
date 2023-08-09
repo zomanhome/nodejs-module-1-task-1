@@ -11,8 +11,8 @@ export const listContacts = async () => {
 
         return contactsArray
     } catch (e) {
-        console.warn(`\x1B[31m${e.name}: ${e.message}`)
-        console.warn(`\x1B[31mCheck ${path.basename(contactsPath)} format`)
+        console.log(`${e.name}: ${e.message}`.red)
+        console.log(`Check ${path.basename(contactsPath)} format`.blue)
 
         return []
     }

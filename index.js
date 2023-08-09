@@ -16,23 +16,19 @@ const argv = program.opts()
 const invokeAction = ({action, id, name, email, phone}) => {
     switch (action) {
         case "list":
-            listContacts().then(res => console.log(res))
-            break;
+            return listContacts().then(res => console.log(res))
 
         case "get":
-            getContactById(id).then(res => console.log(res))
-            break;
+            return getContactById(id).then(res => console.log(res))
 
         case "add":
-            addContact(name, email, phone).then(res => console.log(res))
-            break;
+            return addContact(name, email, phone).then(res => console.log(res))
 
         case "remove":
-            removeContact(id).then(res => console.log(res))
-            break;
+            return removeContact(id).then(res => console.log(res))
 
         default:
-            console.warn("\x1B[31mUnknown action type!");
+            console.log("Unknown action type!".yellow)
     }
 
 }
