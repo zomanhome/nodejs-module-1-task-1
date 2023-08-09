@@ -8,10 +8,10 @@
     "start": "node index",
     "dev": "nodemon index",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "listContacts": "node index --action list",
-    "getContactById": "node index.js --action get --id 05olLMgyVQdWRwgKfg5J6",
-    "addContact": "node index.js --action add --name Mango --email mango@gmail.com --phone 322-22-22",
-    "removeContact": "node index.js --action remove --id qdggE76Jtbfd9eWJHrssH"
+    "listContacts": "node index -a list",
+    "getContactById": "node index -a get -i 05olLMgyVQdWRwgKfg5J6",
+    "addContact": "node index -a add -n Mango -e mango@gmail.com -p 322-22-22",
+    "removeContact": "node index -a remove -i qdggE76Jtbfd9eWJHrssH"
   },
   "repository": {
     "type": "git",

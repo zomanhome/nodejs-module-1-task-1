@@ -3,10 +3,8 @@ import path from "path"
 import {nanoid} from "nanoid"
 
 const contactsPath = path.resolve("./", "db/contacts.json")
-const contacts = fs.readFile(contactsPath, {encoding: "utf-8"})
-
 export const listContacts = async () => {
-    const contactsString = await contacts
+    const contactsString = await fs.readFile(contactsPath, {encoding: "utf-8"})
 
     try {
         const contactsArray = JSON.parse(contactsString)
