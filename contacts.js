@@ -20,7 +20,7 @@ export const listContacts = async () => {
 
 export const getContactById = async contactId => {
     const contacts = await listContacts()
-    const [contact] = contacts.filter(contact => contact.id === contactId)
+    const contact = contacts.find(contact => contact.id === contactId)
 
     return contact || null
 }
