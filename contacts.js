@@ -22,7 +22,7 @@ export const getContactById = async contactId => {
     const contacts = await listContacts()
     const [contact] = contacts.filter(contact => contact.id === contactId)
 
-    return contact ? contact : null
+    return contact || null
 }
 
 export const removeContact = async contactId => {
