@@ -1,5 +1,6 @@
 import {listContacts, getContactById, removeContact, addContact} from "./contacts.js"
 import {Command} from "commander"
+import colors from "colors"
 
 const program = new Command()
 
@@ -16,16 +17,17 @@ const argv = program.opts()
 const invokeAction = ({action, id, name, email, phone}) => {
     switch (action) {
         case "list":
-            return listContacts().then(res => console.log(res))
+            return listContacts().then(res => console.log(colors.green(res)))
 
         case "get":
-            return getContactById(id).then(res => console.log(res))
+            return getContactById(id).then(res => console.log(colors.green(res)))
 
         case "add":
-            return addContact(name, email, phone).then(res => console.log(res))
+            return addContact(name, email, phone).then(res =>
+                console.log(colors.green(JSON.stringify(res, null, 2))))
 
         case "remove":
-            return removeContact(id).then(res => console.log(res))
+            return removeContact(id).then(res => console.log(colors.red(res)))
 
         default:
             console.log("Unknown action type!".yellow)
