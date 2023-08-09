@@ -1,0 +1,34 @@
+{
+  "name": "nodejs-module-1-task-1",
+  "version": "1.0.0",
+  "description": "Task 1 from Module 1",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "listContacts": "node index --action list",
+    "getContactById": "node index.js --action get --id 05olLMgyVQdWRwgKfg5J6",
+    "addContact": "node index.js --action add --name Mango --email mango@gmail.com --phone 322-22-22",
+    "removeContact": "node index.js --action remove --id qdggE76Jtbfd9eWJHrssH"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zomanhome/nodejs-module-1-task-1.git"
+  },
+  "keywords": [],
+  "author": "Andriian Sokolenko",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zomanhome/nodejs-module-1-task-1/issues"
+  },
+  "homepage": "https://github.com/zomanhome/nodejs-module-1-task-1#readme",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "commander": "^11.0.0",
+    "nanoid": "^4.0.2"
+  }
+}
